@@ -1,7 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateCardPageComponent } from './create-card-page/create-card-page.component';
+import { HomeComponent } from './home/home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: 'new',
+    component: CreateCardPageComponent,
+  }
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
